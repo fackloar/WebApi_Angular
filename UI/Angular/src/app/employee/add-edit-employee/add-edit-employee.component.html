@@ -1,0 +1,37 @@
+<div class="flex-row bd-highlight mb-3">
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Отдел</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="EmployeeDepartment"
+            placeholder="Введите отдел" value="{{employee.EmployeeDepartment}}">
+        </div>
+        <label class="col-sm-2 col-form-label">Ф.И.О</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="EmployeeName"
+            placeholder="Введите Ф.И.О">
+        </div>
+        <label class="col-sm-2 col-form-label">Дата рождения</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="DateOfBirth"
+            placeholder="Введите дату рождения">
+        </div>
+        <label class="col-sm-2 col-form-label">Дата устройства на работу</label>
+        <div class="col-sm-10">
+                <input type="text" class="form-control" [(ngModel)]="DateOfJoining"
+                placeholder="Введите дату устройства на работу">
+        </div>
+        <label class="col-sm-2 col-form-label">Заработная плата</label>
+            <div class="col-sm-10">
+                    <input type="text" class="form-control" [(ngModel)]="EmployeeSalary"
+                    placeholder="Введите заработную плату">
+            </div>
+</div>
+<div class="modal-footer">
+<button (click)="addEmployee()" *ngIf="employee.EmployeeID=='0'" class="btn btn-primary">
+    Добавить
+</button>
+
+<button (click)="updateEmployee()" *ngIf="employee.EmployeeID!='0'" class="btn btn-primary">
+    Обновить
+</button>
+</div>
